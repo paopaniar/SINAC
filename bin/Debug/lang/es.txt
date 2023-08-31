@@ -1,0 +1,8 @@
+label1=Email
+label2=Password
+btnIngresar=Log In
+label5=Do you not have an account yet?
+btnRegistrarse=Register
+label6=Did you forgot your password?
+button1=Recover
+
