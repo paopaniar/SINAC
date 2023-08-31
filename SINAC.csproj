@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21A408B3-AFCE-436A-9153-803F8D16116E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SINAC</RootNamespace>
+    <AssemblyName>SINAC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.13\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SRHello\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSFacturapdf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFacturapdf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSHistorialCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSHistorialCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSHistorialFechas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSHistorialFechas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPrueba.cs">
+      <DependentUpon>DSPrueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPrueba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPrueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSVisitantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSVisitantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Horario.cs" />
+    <Compile Include="Enums\MetodoPago.cs" />
+    <Compile Include="Enums\Paises.cs" />
+    <Compile Include="Enums\TipoArea.cs" />
+    <Compile Include="Enums\TipoMoneda.cs" />
+    <Compile Include="Enums\TipoNacionalidad.cs" />
+    <Compile Include="Enums\TipoRol.cs" />
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorialFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistorialFechas.Designer.cs">
+      <DependentUpon>FrmHistorialFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\Entities\CertificateController.cs" />
+    <Compile Include="Layeres\Entities\Tarjeta.cs" />
+    <Compile Include="Layeres\Entities\XmlController.cs" />
+    <Compile Include="Layeres\UI\FrmFirmarXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmFirmarXML.Designer.cs">
+      <DependentUpon>FrmFirmarXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmPruebaPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmPruebaPaises.Designer.cs">
+      <DependentUpon>FrmPruebaPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmPruebaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmPruebaReport.Designer.cs">
+      <DependentUpon>FrmPruebaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\BLL\AreaMantenimientoBLL.cs" />
+    <Compile Include="Layeres\BLL\CarritoCompraBLL.cs" />
+    <Compile Include="Layeres\BLL\ReservacionBLL.cs" />
+    <Compile Include="Layeres\BLL\UsuarioBLL.cs" />
+    <Compile Include="Layeres\BLL\VisitantesBLL.cs" />
+    <Compile Include="Layeres\DAL\AreaMantenimientoDAL.cs" />
+    <Compile Include="Layeres\DAL\CarritoComprasDAL.cs" />
+    <Compile Include="Layeres\DAL\ReservacionDAL.cs" />
+    <Compile Include="Layeres\DAL\VisitantesDAL.cs" />
+    <Compile Include="Layeres\Entities\AreaMantenimiento.cs" />
+    <Compile Include="Layeres\Entities\CarritoCompras.cs" />
+    <Compile Include="Layeres\Entities\Correo.cs" />
+    <Compile Include="Layeres\Entities\CotizadorFacade.cs" />
+    <Compile Include="Layeres\Entities\Idioma.cs" />
+    <Compile Include="Layeres\Entities\Visitantes.cs" />
+    <Compile Include="Layeres\UI\FrmAreaMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmAreaMantenimiento.Designer.cs">
+      <DependentUpon>FrmAreaMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmCarritoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmCarritoCompras.Designer.cs">
+      <DependentUpon>FrmCarritoCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmComprasReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmComprasReporte.Designer.cs">
+      <DependentUpon>FrmComprasReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmGraficos.Designer.cs">
+      <DependentUpon>FrmGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmGuardaparques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmGuardaparques.Designer.cs">
+      <DependentUpon>FrmGuardaparques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmRecuperarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmRecuperarClave.Designer.cs">
+      <DependentUpon>FrmRecuperarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmRerservacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmRerservacion.Designer.cs">
+      <DependentUpon>FrmRerservacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\FrmVisitantes.Designer.cs">
+      <DependentUpon>FrmVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\UI\RegistrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layeres\UI\RegistrarUsuarios.Designer.cs">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layeres\DAL\UsuarioDAL.cs" />
+    <Compile Include="Layeres\Entities\Reservacion.cs" />
+    <Compile Include="Layeres\Entities\Usuario.cs" />
+    <Compile Include="Layeres\Persistencia\DataBase.cs" />
+    <Compile Include="Layeres\Persistencia\FactoryConexion.cs" />
+    <Compile Include="Layeres\Persistencia\FactoryDataBase.cs" />
+    <Compile Include="Layeres\Persistencia\IDataBase.cs" />
+    <Compile Include="RegistroParqueNacionalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroParqueNacionalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Utilitarios\Log.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FacturaPDF.rdlc" />
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorialFechas.resx">
+      <DependentUpon>FrmHistorialFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialFechas.rdlc" />
+    <EmbeddedResource Include="Layeres\UI\FrmFirmarXML.resx">
+      <DependentUpon>FrmFirmarXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmPruebaPaises.resx">
+      <DependentUpon>FrmPruebaPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmPruebaReport.resx">
+      <DependentUpon>FrmPruebaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialCompras.rdlc" />
+    <EmbeddedResource Include="Informes.rdlc" />
+    <EmbeddedResource Include="Layeres\UI\FrmAreaMantenimiento.resx">
+      <DependentUpon>FrmAreaMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmCarritoCompras.resx">
+      <DependentUpon>FrmCarritoCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmComprasReporte.resx">
+      <DependentUpon>FrmComprasReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmGraficos.resx">
+      <DependentUpon>FrmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmGuardaparques.resx">
+      <DependentUpon>FrmGuardaparques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmLogIn.en.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmRecuperarClave.en.resx">
+      <DependentUpon>FrmRecuperarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmRecuperarClave.resx">
+      <DependentUpon>FrmRecuperarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmRerservacion.resx">
+      <DependentUpon>FrmRerservacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\FrmVisitantes.resx">
+      <DependentUpon>FrmVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layeres\UI\RegistrarUsuarios.resx">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PruebaReport.rdlc" />
+    <EmbeddedResource Include="VisitantesReport.rdlc" />
+    <None Include="Connected Services\SRHello\HelloEndpointService.wsdl" />
+    <None Include="Connected Services\SRHello\SINAC.SRHello.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SRHello\SINAC.SRHello.SayHelloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DSFacturapdf.xsc">
+      <DependentUpon>DSFacturapdf.xsd</DependentUpon>
+    </None>
+    <None Include="DSFacturapdf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFacturapdf.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSFacturapdf.xss">
+      <DependentUpon>DSFacturapdf.xsd</DependentUpon>
+    </None>
+    <None Include="DSHistorialCompras.xsc">
+      <DependentUpon>DSHistorialCompras.xsd</DependentUpon>
+    </None>
+    <None Include="DSHistorialCompras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSHistorialCompras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSHistorialCompras.xss">
+      <DependentUpon>DSHistorialCompras.xsd</DependentUpon>
+    </None>
+    <None Include="DSHistorialFechas.xsc">
+      <DependentUpon>DSHistorialFechas.xsd</DependentUpon>
+    </None>
+    <None Include="DSHistorialFechas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSHistorialFechas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSHistorialFechas.xss">
+      <DependentUpon>DSHistorialFechas.xsd</DependentUpon>
+    </None>
+    <None Include="DSPrueba.xsc">
+      <DependentUpon>DSPrueba.xsd</DependentUpon>
+    </None>
+    <None Include="DSPrueba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPrueba.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPrueba.xss">
+      <DependentUpon>DSPrueba.xsd</DependentUpon>
+    </None>
+    <None Include="DSVisitantes.xsc">
+      <DependentUpon>DSVisitantes.xsd</DependentUpon>
+    </None>
+    <None Include="DSVisitantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSVisitantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSVisitantes.xss">
+      <DependentUpon>DSVisitantes.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RegistroParqueNacionalDataSet.xsc">
+      <DependentUpon>RegistroParqueNacionalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegistroParqueNacionalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistroParqueNacionalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistroParqueNacionalDataSet.xss">
+      <DependentUpon>RegistroParqueNacionalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\siSTEM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINACIMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-dark-background-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundblue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minaeimag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACCVCIMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINAEIMAGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SRHello\configuration91.svcinfo" />
+    <None Include="Connected Services\SRHello\configuration.svcinfo" />
+    <None Include="Connected Services\SRHello\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Reservaciones.xslt" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRHello\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

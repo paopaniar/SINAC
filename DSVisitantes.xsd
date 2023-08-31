@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSVisitantes" targetNamespace="http://tempuri.org/DSVisitantes.xsd" xmlns:mstns="http://tempuri.org/DSVisitantes.xsd" xmlns="http://tempuri.org/DSVisitantes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Conexion (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SINAC.Properties.Settings.GlobalReference.Default.Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VisitantesTableAdapter" GeneratorDataComponentClassName="VisitantesTableAdapter" Name="Visitantes" UserDataComponentName="VisitantesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectName="RegistroParqueNacional.dbo.Visitantes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select Visitantes.NombresCompletos, Visitantes.IDVisitantes
+		FROM Visitantes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NombresCompletos" DataSetColumn="NombresCompletos" />
+              <Mapping SourceColumn="IDVisitantes" DataSetColumn="IDVisitantes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSVisitantes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSVisitantes" msprop:Generator_UserDSName="DSVisitantes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Visitantes" msprop:Generator_TableClassName="VisitantesDataTable" msprop:Generator_TableVarName="tableVisitantes" msprop:Generator_TablePropName="Visitantes" msprop:Generator_RowDeletingName="VisitantesRowDeleting" msprop:Generator_RowChangingName="VisitantesRowChanging" msprop:Generator_RowEvHandlerName="VisitantesRowChangeEventHandler" msprop:Generator_RowDeletedName="VisitantesRowDeleted" msprop:Generator_UserTableName="Visitantes" msprop:Generator_RowChangedName="VisitantesRowChanged" msprop:Generator_RowEvArgName="VisitantesRowChangeEvent" msprop:Generator_RowClassName="VisitantesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombresCompletos" msprop:Generator_ColumnVarNameInTable="columnNombresCompletos" msprop:Generator_ColumnPropNameInRow="NombresCompletos" msprop:Generator_ColumnPropNameInTable="NombresCompletosColumn" msprop:Generator_UserColumnName="NombresCompletos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDVisitantes" msprop:Generator_ColumnVarNameInTable="columnIDVisitantes" msprop:Generator_ColumnPropNameInRow="IDVisitantes" msprop:Generator_ColumnPropNameInTable="IDVisitantesColumn" msprop:Generator_UserColumnName="IDVisitantes" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
